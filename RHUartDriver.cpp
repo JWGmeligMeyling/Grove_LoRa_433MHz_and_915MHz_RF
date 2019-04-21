@@ -31,7 +31,7 @@
 #include <RHUartDriver.h>
 
 
-RHUartDriver::RHUartDriver(SoftwareSerial& ss)
+RHUartDriver::RHUartDriver(Stream& ss)
     :
     _ss(ss)
 {
@@ -39,8 +39,8 @@ RHUartDriver::RHUartDriver(SoftwareSerial& ss)
 
 bool RHUartDriver::init()
 {
-    _ss.begin(57600);
-    _ss.listen();
+//    _ss.begin(57600);
+//    _ss.listen();
     
     return true;
 }

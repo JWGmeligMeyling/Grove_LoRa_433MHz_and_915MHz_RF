@@ -34,7 +34,7 @@
 
 #include <Arduino.h>
 #include <RHGenericDriver.h>
-#include <SoftwareSerial.h>
+#include "Stream.h"
 
 
 #define DEFAULT_TIMEOUT 3
@@ -46,7 +46,7 @@ class RHUartDriver : public RHGenericDriver
 {
 public:
 
-    RHUartDriver(SoftwareSerial& ss);
+    RHUartDriver(Stream& ss);
     
     virtual bool init();
     
@@ -70,7 +70,7 @@ public:
 
 protected:
 
-    SoftwareSerial& _ss;
+    Stream& _ss;
 
 private:
 
